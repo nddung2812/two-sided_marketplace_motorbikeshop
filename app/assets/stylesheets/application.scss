@@ -14,3 +14,42 @@
  *= require_self
  */
  @import "bootstrap";
+ .navbar {
+    display:flex;
+    flex-direction:row;
+    .logo{
+        border-radius: 50%;
+    }
+    .nav{
+        color: black;
+    }
+}
+
+.nav-item a{
+    color:black;
+}
+ footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 68%;
+    border-top: 2px solid orange;
+    bottom: 0;
+    .card-body {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer-icon {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 30px;
+    }
+    i {
+        margin: 10px;
+    }
+}

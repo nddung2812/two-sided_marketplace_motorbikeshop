@@ -1,33 +1,36 @@
-<ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/">Motorbike Shop</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/">Bike Lists</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/">Services</a>
-  </li>
-  
-  <li class="nav-item">
-    <% if !user_signed_in? %>
-        <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
-    <% end %>
-  </li>
 
-  <li class="nav-item">
-    <% if user_signed_in? %>
-        <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
-    <% end %>
-  </li>
+<div class = "navbar">
+    <div class="logo">
+        <%= image_tag asset_path("logo.jpeg"), width: 100 %>
+    </div>
+    <ul class="nav nav-pills">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="/">Motorbike Shop</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/">Bike Lists</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/">Services</a>
+    </li>
 
-  <li class="nav-item">
-    <% if user_signed_in? %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-    <% end %>
-  </li>
- 
-</ul>
+    <li class="nav-item">
+        <% if !user_signed_in? %>
+            <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+        <% end %>
+    </li>
+
+    <li class="nav-item">
+        <% if user_signed_in? %>
+            <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link" %>
+        <% end %>
+    </li>
+
+    <li class="nav-item">
+        <% if user_signed_in? %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <% end %>
+    </li>
+    
+    </ul>
+</div>
