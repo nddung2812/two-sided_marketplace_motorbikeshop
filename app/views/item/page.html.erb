@@ -1,0 +1,13 @@
+<div class="item-listed">
+    <% @posts.each do |post|%>
+        <div class="card" style="width: 18rem;">
+            <%= image_tag post.picture, class: "card-img-top"%>
+            <div class="card-body">
+                <h5 class="card-title"><%= post.name %></h5>
+                <p class="card-text"><%= post.description %></p>
+                <p class="card-text">$<%= post.price %>
+                <%= link_to "Read more", post_path(post.id), class: "btn btn-primary btn-right" %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
