@@ -32,7 +32,11 @@
 
 <p>
   <strong>User:</strong>
-  <%= @post.user_id %>
+  <%= @post.user.email %>
+</p>
+  <%= image_tag @post.picture%>
+<p>
+
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
