@@ -14,3 +14,12 @@
         min-width: 70%;
     }
 }
+.buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  .buy_button{
+      margin-left: 75%;
+  }
+}
