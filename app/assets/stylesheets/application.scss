@@ -49,6 +49,12 @@ body{
         margin: 0 3px;
     }
 }
+.second {
+    background-color: #f8e007;
+}
+.third {
+    background-color: rgb(224, 151, 82);
+}
 
 .nav-item a{
     color:black;
@@ -77,4 +83,11 @@ body{
     i {
         margin: 10px;
     }
+}
+.create{
+    border: 1px solid black;
+    margin: 5px;
+}
+.post_button{
+    margin: 10px 0;
 }

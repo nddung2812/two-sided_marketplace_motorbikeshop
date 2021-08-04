@@ -34,13 +34,22 @@
   <strong>User:</strong>
   <%= @post.user.email %>
 </p>
-  <%= image_tag @post.picture%>
+  <%= image_tag @post.picture, width: 1300 %>
 <p>
 
 </p>
 <div class="buttons">
 <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> |
-<%= link_to 'Back', item_page_path, class:"btn btn-primary" %>
+<%= link_to 'Back', item_page_path, class:"btn btn-primary" %> |
+
+  <% if @post[:id].to_i > 1 %>
+    <%= link_to "Previous", post_path(@post[:id]-1),class:"btn btn-secondary" %>
+  <% end %> |
+
+  <% if @post[:id].to_i < 9 %>
+    <%= link_to "Next", post_path(@post[:id]+1), class:"btn btn-secondary" %>
+  <% end %> 
+
   <div class="buy_button">
     <%= render_buy_button(current_user, @post) %>
   </div>
