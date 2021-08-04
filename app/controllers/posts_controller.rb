@@ -8,6 +8,34 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+
+    session = Stripe::Checkout::Session.create({
+      payment_method_types: [
+        'card',
+      ],
+      customer_email: current_user ? current_user.email : nil,
+      line_items: [{
+        price_data: {
+          unit_amount: (@post.price * 100).to_i,
+          currency: "aud",
+          product_data: { 
+            name: @post.name,
+            description: @post.description
+          }
+        },
+        quantity: 1,
+      }],
+      payment_intent_data: { 
+        metadata: { 
+          post_id: @post.id,
+          user_id: current_user ? current_user.id : nil,
+        }
+      },
+      mode: 'payment',
+      success_url: "#{root_url}payments/success",
+      cancel_url: "#{root_url}posts",
+    })
+    @session_id = session.id
   end
 
   # GET /posts/new

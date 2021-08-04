@@ -38,6 +38,22 @@
 <p>
 
 </p>
-
+<%= render_buy_button(current_user, @listing) %>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const button = document.querySelector("[data-stripe='payment']")
+  if (button) {
+    button.addEventListener("click", () => {
+      console.log("button clicked")
+      const stripe = Stripe(
+        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+      )
+      stripe.redirectToCheckout({
+        sessionId: "<%= @session_id %>"
+      })
+    })
+  }
+</script>
