@@ -1,43 +1,45 @@
-<div class="greeting">
-   <% if user_signed_in?%>
-    <h3><%= "Welcome, #{current_user.email}!"%></h3>
-  <% end %>
-</div>
-<div class="welcome">
-  <h1>... Welcome to Uniq_E! ... </h1>
-  <h4>We are motorcycle specialists! </h4>
-</div>
-<div class="container homepage">
-  <div class="slidershow middle">
-    <div class="slides"> 
-      <input type="radio" name ="r" id="r1" checked>
-      <input type="radio" name ="r" id="r2">
-      <input type="radio" name ="r" id="r3">
-      <input type="radio" name ="r" id="r4">
-      <input type="radio" name ="r" id="r5">
-      
-      <div class="slide s1">
-          <%= image_tag asset_path("1"), class: "img-fluid" %>
+<div class="home_page_display">
+  <div class="greeting">
+    <% if user_signed_in?%>
+      <h3><%= "Welcome, #{current_user.email}!"%></h3>
+    <% end %>
+  </div>
+  <div class="welcome">
+    <h1>... Welcome to Uniq_E! ... </h1>
+    <h4>We are motorcycle specialists! </h4>
+  </div>
+  <div class="container homepage">
+    <div class="slidershow middle">
+      <div class="slides"> 
+        <input type="radio" name ="r" id="r1" checked>
+        <input type="radio" name ="r" id="r2">
+        <input type="radio" name ="r" id="r3">
+        <input type="radio" name ="r" id="r4">
+        <input type="radio" name ="r" id="r5">
+        
+        <div class="slide s1">
+            <%= image_tag asset_path("1"), class: "img-fluid" %>
+        </div>
+        <div class="slide">
+            <%= image_tag asset_path("2"), class: "img-fluid" %>
+        </div>
+        <div class="slide">
+            <%= image_tag asset_path("3"), class: "img-fluid" %>
+        </div>
+        <div class="slide">
+            <%= image_tag asset_path("4"), class: "img-fluid" %>
+        </div>
+        <div class="slide">
+            <%= image_tag asset_path("5"), class: "img-fluid" %>
+        </div>
       </div>
-      <div class="slide">
-          <%= image_tag asset_path("2"), class: "img-fluid" %>
+      <div class="navigation">
+          <label for="r1" class ="bar"></label>
+          <label for="r2" class ="bar"></label>
+          <label for="r3" class ="bar"></label>
+          <label for="r4" class ="bar"></label>
+          <label for="r5" class ="bar"></label>
       </div>
-      <div class="slide">
-          <%= image_tag asset_path("3"), class: "img-fluid" %>
-      </div>
-      <div class="slide">
-          <%= image_tag asset_path("4"), class: "img-fluid" %>
-      </div>
-      <div class="slide">
-          <%= image_tag asset_path("5"), class: "img-fluid" %>
-      </div>
-    </div>
-    <div class="navigation">
-        <label for="r1" class ="bar"></label>
-        <label for="r2" class ="bar"></label>
-        <label for="r3" class ="bar"></label>
-        <label for="r4" class ="bar"></label>
-        <label for="r5" class ="bar"></label>
     </div>
   </div>
 </div>
