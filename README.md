@@ -22,5 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-# This is just to test if the reset is successful
