@@ -1,6 +1,10 @@
 
 <div class="navbar">
     <div class="logo">
+        <!--<%= link_to "#{image_tag("logo.jpeg",width: 100, class:"logo1")}".html_safe, root_path %>-->
+        <%= link_to root_path do%>
+            <%=image_tag "logo.jpeg", width:100, class:"logo1" =%>
+        <% end %>
         <h1>Uniq_E</h1>
     </div>
     
@@ -23,7 +27,7 @@
 
         <li class="nav-item third">
             <% if !user_signed_in? %>
-                <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+                <%= link_to "Sign in", new_user_session_path, method: :get, class: "nav-link" %>
             <% end %>
         </li>
 
