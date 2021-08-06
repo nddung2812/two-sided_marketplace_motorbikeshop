@@ -1,27 +1,20 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.home_page_display{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-}
 body{
     margin: 0;
     padding: 0;
     background: #34495e;
 }
 .slidershow{
-    width: 52%;
-    height: 53%;
+    width: 54%;
+    height: 60%;
     overflow: hidden;
 }
 .middle{
     position: absolute;
-    top:47%;
-    left: 48%;
+    top:57%;
+    left: 50%;
     transform: translate(-50%,-50%);
 }
 .navigation{
@@ -75,7 +68,8 @@ input[name="r"]{
     margin-left:-80%;
 }
 .welcome{
-    margin-top: 49%;
+    margin-top: 35%;
+    width: 90vw;
     text-align: center;
     h4{
         font-style: italic;
@@ -83,8 +77,9 @@ input[name="r"]{
     }
 }
 .greeting{
-   margin-top:-25px;
- text-align: center;
+    width: 90vw;
+    text-align: center;
+    margin-top:-25px;
    h3{
        font-style: italic;
    }

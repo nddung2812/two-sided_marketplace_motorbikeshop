@@ -17,9 +17,7 @@
 body{
     background-color: rgb(229, 229, 229);
 }
-.container{
-    margin-left: 16%;
-}
+
 .homepage {
     display:flex;
     flex-direction: column;
@@ -27,7 +25,7 @@ body{
     justify-content:center;
 } 
 .navbar {
-    width: 68vw;
+    width: 90vw;
     display:flex;
     flex-direction:row;
     border-bottom: 3px solid orange;
@@ -57,6 +55,7 @@ body{
 }
 .third {
     background-color: rgb(224, 151, 82);
+    border-radius:3px;
 }
 
 .nav-item a{
@@ -64,12 +63,12 @@ body{
 }
  footer {
     display:flex;
-    padding-right: 140px;
+    padding-right: 40px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 68vw;
+    width: 90vw;
     border-top: 3px solid orange;
     bottom: 0;
     .card-body {
@@ -89,7 +88,7 @@ body{
     }
 }
 .create{
-    border: 1px solid black;
+    background-color: rgb(224, 151, 82);
     margin: 5px;
 }
 .post_button{
