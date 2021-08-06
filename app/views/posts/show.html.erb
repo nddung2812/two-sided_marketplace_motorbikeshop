@@ -42,11 +42,11 @@
 <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> |
 <%= link_to 'Back', item_page_path, class:"btn btn-primary" %> |
 
-  <% if @post[:id].to_i > 1 %>
+  <% if @post[:id].to_i < 9  %>
     <%= link_to "Previous", post_path(@post[:id]-1),class:"btn btn-secondary" %>
   <% end %> |
 
-  <% if @post[:id].to_i < 9 %>
+  <% if @post[:id].to_i > 1 %>
     <%= link_to "Next", post_path(@post[:id]+1), class:"btn btn-secondary" %>
   <% end %> 
 
