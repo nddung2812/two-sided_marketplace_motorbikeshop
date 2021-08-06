@@ -39,14 +39,14 @@
 
 </p>
 <div class="buttons">
-<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> |
+<!--<%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> |-->
 <%= link_to 'Back', item_page_path, class:"btn btn-primary" %> |
 
   <% if @post[:id].to_i > 3 %>
     <%= link_to "Previous", post_path(@post[:id]-1),class:"btn btn-secondary" %>
   <% end %> |
 
-  <% if @post[:id].to_i < 10 && @post[:id].to_i >=3 %>
+  <% if @post[:id].to_i < 13 && @post[:id].to_i >=3 %>
     <%= link_to "Next", post_path(@post[:id]+1), class:"btn btn-secondary" %>
   <% end %> 
 
