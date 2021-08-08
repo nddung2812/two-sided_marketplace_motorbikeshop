@@ -1,5 +1,6 @@
 class ItemController < ApplicationController
   def page
-    @posts = Post.all
+    @q = Post.ransack(params[:q])
+    @posts = @q.result
   end
 end

@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-
+  before_action :set_user_product, only: [ :update, :edit, :destroy ]
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @q = Post.ransack(params[:q])
+    @posts = @q.result
   end
 
   # GET /posts/1 or /posts/1.json
