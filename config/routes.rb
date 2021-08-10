@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :services
   get 'payments/success', to: 'payments#success'
   get 'item/page'
   resources :posts
