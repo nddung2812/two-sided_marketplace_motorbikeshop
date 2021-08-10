@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @service.job %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @service.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @service.price %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @service.model %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @service.make %>
+</p>
+
+<p>
+  <strong>Major service:</strong>
+  <%= @service.major_service %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @service.address %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @service.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_service_path(@service) %> |
+<%= link_to 'Back', services_path %>
