@@ -1,13 +1,16 @@
 <div class="search-bar">
+<!--implement search bar-->
     <%= search_form_for @q do |f| %>
     <i class="fas fa-search"></i>
     <%= f.search_field :name_cont %>
     <%= f.submit class:"search-button" %>
     <% end %>
 </div>
+<!--loop through every single card available-->
 <div class="item-listed">
     <% @posts.each do |post|%>
         <div class="card" style="width: 18rem;">
+        <!--Adding an image to each card and check if the image attached or not-->
             <%= image_tag post.picture, class: "card-img-top" if post.picture.attached? %>
             <div class="card-body">
                 <h5 class="card-title"><%= post.name %></h5>

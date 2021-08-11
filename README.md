@@ -58,8 +58,8 @@
 * Users can edit their profile, change passwords and details
 * Users can pay through the app using Stripe payment gateway
 
-## Sitemap
-
+## Site map
+![Site Map](app/assets/images/Sitemap.png)
 ## Screenshots
 
 ![ New Post Page ](app/assets/images/SS1.png)

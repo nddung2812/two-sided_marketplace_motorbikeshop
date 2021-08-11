@@ -4,13 +4,14 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   # GET /posts or /posts.json
   def index
+    #implement ransack gem for search bar
     @q = Post.ransack(params[:q])
     @posts = @q.result
   end
 
   # GET /posts/1 or /posts/1.json
   def show
-
+    #stripe payment
     session = Stripe::Checkout::Session.create({
       payment_method_types: [
         'card',
@@ -52,6 +53,7 @@ class PostsController < ApplicationController
   # POST /posts or /posts.json
   def create
     @post = Post.new(post_params)
+    #match post being created with current user by their id
     @post.user_id = current_user.id
     respond_to do |format|
       if @post.save

@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<!--implement search bar-->
 <div class="search-bar">
       <%= search_form_for @q do |f| %>
       <i class="fas fa-search"></i>
@@ -33,6 +34,7 @@
         <td><%= post.model %></td>
         <td><%= post.user_id %></td>
         <td><%= link_to 'Show', post, class:"btn btn-primary"%></td>
+        <!--Check only available for admin-->
         <% if current_user && current_user.admin %>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>
           <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

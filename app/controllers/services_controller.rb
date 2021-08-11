@@ -22,7 +22,7 @@ class ServicesController < ApplicationController
   # POST /services or /services.json
   def create
     @service = Service.new(service_params)
-
+    @service.user_id = current_user.id
     respond_to do |format|
       if @service.save
         format.html { redirect_to @service, notice: "Service was successfully created." }
@@ -64,6 +64,6 @@ class ServicesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def service_params
-      params.require(:service).permit(:job, :description, :price, :model, :make, :major_service, :address, :user_id)
+      params.require(:service).permit(:job, :description, :price, :model, :make, :major_service, :address, :user_id, :picture)
     end
 end

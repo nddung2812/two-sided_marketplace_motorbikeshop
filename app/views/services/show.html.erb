@@ -37,8 +37,8 @@
 
 <p>
   <strong>User:</strong>
-  <%= @service.user_id %>
+  <%= @service.user.email %>
 </p>
-
+<%= image_tag @service.picture, width: 1300 %>
 <%= link_to 'Edit', edit_service_path(@service) %> |
 <%= link_to 'Back', services_path %>

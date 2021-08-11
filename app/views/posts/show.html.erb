@@ -39,23 +39,24 @@
 
 </p>
 <div class="buttons">
+<!--Check user is admin to view use this button-->
 <% if current_user && current_user.admin %>
   <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary" %> |
 <% end %>
 <%= link_to 'Back', item_page_path, class:"btn btn-primary" %> |
-
+<!--Create Previous and Next button-->
   <% if @post[:id].to_i > 3 %>
     <%= link_to "Previous", post_path(@post[:id]-1),class:"btn btn-secondary" %>
   <% end %> |
-
   <% if @post[:id].to_i < 16 && @post[:id].to_i >=3 %>
     <%= link_to "Next", post_path(@post[:id]+1), class:"btn btn-secondary" %>
   <% end %> 
-
+<!--Create Buy button-->
   <div class="buy_button">
     <%= render_buy_button(current_user, @post) %>
   </div>
 </div>
+<!--Javascript for buy button-->
 <script src="https://js.stripe.com/v3/"></script>
 <script>
   const button = document.querySelector("[data-stripe='payment']")
