@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :timeoutable
   has_many :posts
   has_many :services
+  has_one :user_contact
 end
