@@ -50,6 +50,8 @@
 ## Functionality / Features
 * Users must sign up and sign in in order to use the application, when signing in, sign out button will appear and sign button will disappear and vice versa with when signing out
 * Standard users are restricted with edit and delete functions
+* Admin user name : admin@test.com 
+* Admin user password: 123456
 * Once users sign up, they can start uploading their posts, services including a photo, name, description, price and other details. 
 * After 10 mins of inactivity, the current user will be automatically logged out
 * Admin users can have the access to edit, delete posts
