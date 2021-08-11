@@ -62,23 +62,23 @@
 
 ## Screenshots
 
-![ New Post Page ](app/assets/images/ss1.png)
+![ New Post Page ](app/assets/images/SS1.png)
 
-![Home Page](app/assets/images/ss2.png)
+![Home Page](app/assets/images/SS2.png)
 
-![Item Page](app/assets/images/ss3.png)
+![Item Page](app/assets/images/SS3.png)
 
-![Show Page](app/assets/images/ss4.png)
+![Show Page](app/assets/images/SS4.png)
 
-![Show/post:id Page](app/assets/images/ss5.png)
+![Show/post:id Page](app/assets/images/SS5.png)
 
-![Edit profile Page](app/assets/images/ss6.png)
+![Edit profile Page](app/assets/images/SS6.png)
 
-![New Service Page](app/assets/images/ss7.png)
+![New Service Page](app/assets/images/SS7.png)
 
-![Stripe Payment Page](app/assets/images/ss8.png)
+![Stripe Payment Page](app/assets/images/SS8.png)
 
-![Confirmation Page](app/assets/images/ss9.png)
+![Confirmation Page](app/assets/images/SS9.png)
 
 ## Target audience
 * Motorcyle owners
