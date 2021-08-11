@@ -139,6 +139,14 @@ Reason to finalized ERD tables
 
 ![Final ERD](app/assets/images/Final_ERD.png)
 
+# Different high-level components (abstractions)
+
+1. In a MVC application like Uniq_E, User model is associated with post and service models by using one to many relationship. 
+
+2. When an user create a post and service, the create method in post and service controllers is checking and assign current user with the post which has just been created. 
+
+3. In the views, all the buttons are display by using link_to syntax and path using rails routes. Therefore, relevant contents are to be rendered.
+
 # Third party services
 1. Fontawesome - to add icons on the website
 2. Bootstrap 5 - to style and customize Front-End interaction
