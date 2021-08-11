@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 <div class="search-bar">
-    <%= search_form_for @q do |f| %>
-    <i class="fas fa-search"></i>
-    <%= f.search_field :name_cont %>
-    <%= f.submit class:"search-button" %>
+      <%= search_form_for @q do |f| %>
+      <i class="fas fa-search"></i>
+      <%= f.search_field :name_cont %>
+      <%= f.submit class:"search-button" %>
     <% end %>
 </div>
 <h1>Posts</h1>
