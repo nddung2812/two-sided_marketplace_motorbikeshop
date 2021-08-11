@@ -48,9 +48,9 @@
 * Create more jobs for local businesses
 * Allow users to find the best services and bikes available in the market within the nearest locations
 ## Functionality / Features
-* Users must sign up and sign in in order to use the application
+* Users must sign up and sign in in order to use the application, when signing in, sign out button will appear and sign button will disappear and vice versa with when signing out
 * Standard users are restricted with edit and delete functions
-* Once users sign up, they can start uploading their posts, services including a photo, name, description, price and other details about
+* Once users sign up, they can start uploading their posts, services including a photo, name, description, price and other details. 
 * After 10 mins of inactivity, the current user will be automatically logged out
 * Admin users can have the access to edit, delete posts
 * Users can edit their profile, change passwords and details
