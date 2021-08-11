@@ -193,7 +193,8 @@ Reason to finalized ERD tables
 - belongs to AWS_blobs
 # Data schema design
 
-```ActiveRecord::Schema.define(version: 2021_08_10_032859) do
+```
+ActiveRecord::Schema.define(version: 2021_08_11_121347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -285,6 +286,35 @@ Reason to finalized ERD tables
     t.index ["user_id"], name: "index_services_on_user_id"
   end
 
+  create_table "states", force: :cascade do |t|
+    t.string "state_name"
+    t.bigint "user_address_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_address_id"], name: "index_states_on_user_address_id"
+  end
+
+  create_table "user_addresses", force: :cascade do |t|
+    t.integer "street_number"
+    t.string "street_name"
+    t.string "postcode_id"
+    t.string "integer"
+    t.bigint "user_contact_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_contact_id"], name: "index_user_addresses_on_user_contact_id"
+  end
+
+  create_table "user_contacts", force: :cascade do |t|
+    t.string "email"
+    t.integer "phone"
+    t.integer "address_id"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_user_contacts_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -293,6 +323,7 @@ Reason to finalized ERD tables
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -302,7 +333,11 @@ Reason to finalized ERD tables
   add_foreign_key "listings", "users"
   add_foreign_key "posts", "users"
   add_foreign_key "services", "users"
+  add_foreign_key "states", "user_addresses"
+  add_foreign_key "user_addresses", "user_contacts"
+  add_foreign_key "user_contacts", "users"
 end
+
 ```
 # Task Allocation
 I am using Trello to manage this project in terms of requirements, debugging and time management. Each card is colored due to their priority and moved to appropriate columns depending on the status.

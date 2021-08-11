@@ -2,6 +2,7 @@
 <div class="navbar">
     <div class="logo">
         <!--<%= link_to "#{image_tag("logo.jpeg",width: 100, class:"logo1")}".html_safe, root_path %>-->
+        <!--Click to logo and take user to landing page-->
         <%= link_to root_path do%>
             <%=image_tag "logo.jpeg", width:100, class:"logo1" =%>
         <% end %>
@@ -29,11 +30,12 @@
         </li>
 
         <li class="nav-item third">
+        <!--if user is not signing in then show log in button-->
             <% if !user_signed_in? %>
                 <%= link_to "Log in", new_user_session_path, method: :get, class: "nav-link" %>
             <% end %>
         </li>
-
+        <!--if user is already signed in then show edit profile and log out buttons-->
         <li class="nav-item">
             <% if user_signed_in? %>
                 <%= link_to "Edit Profile", edit_user_registration_path, class: "nav-link " %>
