@@ -40,5 +40,7 @@
   <%= @service.user.email %>
 </p>
 <%= image_tag @service.picture, width: 1300 %>
-<%= link_to 'Edit', edit_service_path(@service) %> |
+<% if current_user && current_user.admin %>
+  <%= link_to 'Edit', edit_service_path(@service) %> |
+<% end %>
 <%= link_to 'Back', services_path %>
